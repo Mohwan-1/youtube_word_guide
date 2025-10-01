@@ -1,3 +1,306 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 2025 Modern Bold Design System - Gen Z Aesthetic */
+
+@layer base {
+  :root {
+    /* Bold Modern Color Palette - Vivid & Sophisticated */
+    --color-primary: 270 100% 65%;
+    --color-primary-dark: 270 100% 55%;
+    --color-secondary: 340 100% 60%;
+    --color-accent: 180 100% 50%;
+    --color-neutral: 220 15% 20%;
+
+    /* Dopamine Colors - Vibrant Energy */
+    --color-electric-blue: 210 100% 60%;
+    --color-neon-pink: 330 100% 65%;
+    --color-cyber-purple: 270 85% 60%;
+    --color-vivid-orange: 25 100% 60%;
+    --color-lime-green: 75 80% 55%;
+
+    /* Dark Mode Base */
+    --color-dark-bg: 222 20% 8%;
+    --color-dark-surface: 222 18% 12%;
+    --color-dark-border: 222 15% 18%;
+
+    /* Spacing - Generous Modern */
+    --space-unit: 8px;
+    --space-xs: calc(var(--space-unit) * 1);
+    --space-sm: calc(var(--space-unit) * 2);
+    --space-md: calc(var(--space-unit) * 3);
+    --space-lg: calc(var(--space-unit) * 4);
+    --space-xl: calc(var(--space-unit) * 6);
+    --space-2xl: calc(var(--space-unit) * 8);
+    --space-3xl: calc(var(--space-unit) * 12);
+
+    /* Typography - Bold & Expressive */
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+
+    --text-xs: clamp(0.75rem, 0.7rem + 0.15vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+    --text-xl: clamp(1.375rem, 1.25rem + 0.5vw, 1.75rem);
+    --text-2xl: clamp(1.75rem, 1.5rem + 0.75vw, 2.25rem);
+    --text-3xl: clamp(2.25rem, 1.85rem + 1.25vw, 3rem);
+    --text-4xl: clamp(3rem, 2.25rem + 2vw, 4.5rem);
+    --text-5xl: clamp(4rem, 3rem + 3vw, 6rem);
+    --text-6xl: clamp(5rem, 3.5rem + 4vw, 8rem);
+
+    /* Modern Effects */
+    --shadow-brutal: 8px 8px 0 0 rgba(0, 0, 0, 0.9);
+    --shadow-glow: 0 0 30px rgba(180, 0, 255, 0.4);
+    --shadow-soft: 0 4px 60px rgba(0, 0, 0, 0.08);
+    --blur-glass: 20px;
+  }
+
+  * {
+    @apply border-gray-800/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+  }
+
+  /* Bold Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-black tracking-tight;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: var(--text-6xl);
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: var(--text-5xl);
+    letter-spacing: -0.025em;
+  }
+
+  h3 {
+    font-size: var(--text-4xl);
+    letter-spacing: -0.02em;
+  }
+
+  /* Focus - Modern */
+  *:focus-visible {
+    @apply outline-none ring-4 ring-purple-500/50 ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-purple-600 text-white;
+  }
+}
+
+@layer components {
+  /* Brutal Modern Card */
+  .card-brutal {
+    @apply bg-white border-4 border-black transition-all duration-300;
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .card-brutal:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0 0 rgba(0, 0, 0, 0.9);
+  }
+
+  /* Neon Glow Effect */
+  .glow-neon {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px currentColor);
+      opacity: 1;
+    }
+    50% {
+      filter: drop-shadow(0 0 40px currentColor);
+      opacity: 0.8;
+    }
+  }
+
+  /* Gradient Text */
+  .text-gradient-vivid {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-cyber {
+    @apply bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-electric {
+    @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Modern Glass */
+  .glass-modern {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-gray-900/60 backdrop-blur-2xl border border-gray-700/30;
+  }
+
+  /* Morphing Blob Background */
+  .blob-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blob-bg::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morph 8s ease-in-out infinite;
+    opacity: 0.3;
+    filter: blur(40px);
+  }
+
+  @keyframes morph {
+    0%, 100% {
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: translate(50px, 50px) rotate(90deg);
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      transform: translate(0, 100px) rotate(180deg);
+    }
+    75% {
+      border-radius: 50% 70% 40% 60% / 40% 70% 50% 60%;
+      transform: translate(-50px, 50px) rotate(270deg);
+    }
+  }
+
+  /* Parallax Effect */
+  .parallax {
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Smooth Reveal Animation */
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-reveal {
+    animation: reveal-up 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  /* Magnetic Effect */
+  .magnetic {
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .magnetic:hover {
+    transform: scale(1.05);
+  }
+
+  /* Stripe Background */
+  .stripe-bg {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.03) 10px,
+      rgba(0, 0, 0, 0.03) 20px
+    );
+  }
+
+  /* Modern Grid */
+  .grid-modern {
+    @apply grid gap-6 md:gap-8 lg:gap-10;
+  }
+}
+
+@layer utilities {
+  /* Container Utilities */
+  .container-tight {
+    @apply max-w-4xl mx-auto px-6;
+  }
+
+  .container-standard {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  /* Spacing Utilities */
+  .section-spacing {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide Scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Scrollbar - Sleek */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-700;
+}
+
+/* Print Styles */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+}
