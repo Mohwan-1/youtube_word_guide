@@ -206,7 +206,7 @@ function App() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-reveal px-4" style={{ animationDelay: '0.3s' }}>
+          <div className="flex items-center justify-center animate-reveal px-4" style={{ animationDelay: '0.3s' }}>
             <Button
               onClick={() => scrollToSection('basic')}
               className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white font-bold px-8 py-6 md:px-10 md:py-7 text-base md:text-lg rounded-2xl transition-all magnetic group"
@@ -219,7 +219,7 @@ function App() {
             <Button
               onClick={handlePrint}
               variant="outline"
-              className="w-full sm:w-auto border-2 border-black hover:bg-black hover:text-white font-bold px-8 py-6 md:px-10 md:py-7 text-base md:text-lg rounded-2xl transition-all magnetic"
+              className="hidden w-full sm:w-auto border-2 border-black hover:bg-black hover:text-white font-bold px-8 py-6 md:px-10 md:py-7 text-base md:text-lg rounded-2xl transition-all magnetic"
             >
               인쇄하기
             </Button>
@@ -331,7 +331,7 @@ function App() {
           </p>
           <Button
             onClick={handlePrint}
-            className="bg-white hover:bg-gray-100 text-black font-bold px-8 py-4 rounded-2xl transition-all magnetic"
+            className="hidden bg-white hover:bg-gray-100 text-black font-bold px-8 py-4 rounded-2xl transition-all magnetic"
           >
             📄 인쇄하기
           </Button>
