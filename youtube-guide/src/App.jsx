@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { termsByCategory, categoryNames } from '@/data/terms';
 import { NewsSection } from '@/components/NewsSection';
-import { AdSense } from '@/components/AdSense';
 
 function App() {
   const [fontSize, setFontSize] = useState('normal');
@@ -316,9 +315,6 @@ function App() {
 
       {/* News Section */}
       <NewsSection />
-
-      {/* Google AdSense */}
-      <AdSense />
 
       {/* Footer - Minimalist */}
       <footer className="section-spacing bg-black text-white print:hidden">
