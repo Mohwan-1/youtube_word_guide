@@ -188,10 +188,8 @@ function App() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-black mb-8 leading-none animate-reveal" style={{ animationDelay: '0.1s' }}>
-            유튜브
-            <br />
-            <span className="text-gradient-vivid">용어의</span>
+          <h1 className="text-6xl md:text-7xl lg:text-9xl font-black mb-8 leading-tight tracking-wide animate-reveal" style={{ animationDelay: '0.1s', letterSpacing: '0.05em' }}>
+            유튜브 <span className="text-gradient-vivid">용어의</span>
             <br />
             모든 것
           </h1>
@@ -244,14 +242,14 @@ function App() {
 
       {/* Term Sections - Modern Grid */}
       {[
-        { id: 'basic', category: 'basic', color: 'purple', emoji: '👋' },
-        { id: 'production', category: 'production', color: 'blue', emoji: '🎬' },
-        { id: 'revenue', category: 'revenue', color: 'green', emoji: '💰' },
-        { id: 'advanced', category: 'advanced', color: 'pink', emoji: '🚀' },
-        { id: 'community', category: 'community', color: 'orange', emoji: '💬' },
-        { id: 'analytics', category: 'analytics', color: 'cyan', emoji: '📊' }
+        { id: 'basic', category: 'basic', color: 'purple', emoji: '👋', bgColor: 'bg-purple-50/80' },
+        { id: 'production', category: 'production', color: 'blue', emoji: '🎬', bgColor: 'bg-blue-50/80' },
+        { id: 'revenue', category: 'revenue', color: 'green', emoji: '💰', bgColor: 'bg-emerald-50/80' },
+        { id: 'advanced', category: 'advanced', color: 'pink', emoji: '🚀', bgColor: 'bg-pink-50/80' },
+        { id: 'community', category: 'community', color: 'orange', emoji: '💬', bgColor: 'bg-orange-50/80' },
+        { id: 'analytics', category: 'analytics', color: 'cyan', emoji: '📊', bgColor: 'bg-cyan-50/80' }
       ].map((section, idx) => (
-        <section key={section.id} id={section.id} className={`section-spacing ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50 stripe-bg'}`}>
+        <section key={section.id} id={section.id} className={`section-spacing ${section.bgColor}`}>
           <div className="container-wide">
             {/* Section Header */}
             <div className="flex items-center gap-6 mb-16">
