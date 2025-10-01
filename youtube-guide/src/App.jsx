@@ -275,7 +275,7 @@ function App() {
           </div>
 
           {/* Stats - Brutal Style */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mt-12 md:mt-20 animate-reveal px-4" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto mt-12 md:mt-20 animate-reveal px-4" style={{ animationDelay: '0.4s' }}>
             {[
               { number: '61개', label: '핵심 용어' },
               { number: '6개', label: '카테고리' },
@@ -283,12 +283,12 @@ function App() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="card-brutal p-4 md:p-6 text-center magnetic"
+                className="card-brutal p-3 sm:p-4 md:p-6 text-center magnetic flex flex-col items-center justify-center min-h-[100px] sm:min-h-[120px]"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-gradient-electric mb-1 md:mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gradient-electric mb-1 md:mb-2 leading-tight">
                   {stat.number}
                 </div>
-                <div className="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wider leading-tight whitespace-nowrap">{stat.label}</div>
               </div>
             ))}
           </div>
