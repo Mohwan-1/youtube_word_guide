@@ -173,31 +173,31 @@ function App() {
       {/* Bold Hero Section */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center blob-bg section-spacing"
+        className="relative min-h-screen flex items-center justify-center blob-bg section-spacing px-4"
       >
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 right-10 md:right-20 w-48 h-48 md:w-96 md:h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 left-10 md:left-20 w-48 h-48 md:w-96 md:h-96 bg-pink-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 w-48 h-48 md:w-96 md:h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="container-standard relative z-10 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2 bg-black text-white rounded-full text-sm font-bold uppercase tracking-wider mb-10 animate-reveal">
+          <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2 bg-black text-white rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-8 md:mb-10 animate-reveal">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             유튜브 완벽 가이드
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-9xl font-black mb-8 leading-tight tracking-wide animate-reveal" style={{ animationDelay: '0.1s', letterSpacing: '0.05em' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black mb-6 md:mb-8 leading-tight tracking-wide animate-reveal px-4" style={{ animationDelay: '0.1s', letterSpacing: '0.05em' }}>
             유튜브 <span className="text-gradient-vivid">용어의</span>
             <br />
             모든 것
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto font-semibold animate-reveal leading-relaxed" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-10 md:mb-12 max-w-2xl mx-auto font-semibold animate-reveal leading-relaxed px-4" style={{ animationDelay: '0.2s' }}>
             61개 핵심 용어를 쉽게 설명합니다
             <br />
             초보자부터 전문가까지
@@ -206,27 +206,27 @@ function App() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-reveal" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-reveal px-4" style={{ animationDelay: '0.3s' }}>
             <Button
               onClick={() => scrollToSection('basic')}
-              className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white font-bold px-10 py-7 text-lg rounded-2xl transition-all magnetic group"
+              className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white font-bold px-8 py-6 md:px-10 md:py-7 text-base md:text-lg rounded-2xl transition-all magnetic group"
             >
               <span>바로 시작하기</span>
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Button>
             <Button
               onClick={handlePrint}
               variant="outline"
-              className="w-full sm:w-auto border-2 border-black hover:bg-black hover:text-white font-bold px-10 py-7 text-lg rounded-2xl transition-all magnetic"
+              className="w-full sm:w-auto border-2 border-black hover:bg-black hover:text-white font-bold px-8 py-6 md:px-10 md:py-7 text-base md:text-lg rounded-2xl transition-all magnetic"
             >
               인쇄하기
             </Button>
           </div>
 
           {/* Stats - Brutal Style */}
-          <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mt-20 animate-reveal" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-3xl mx-auto mt-12 md:mt-20 animate-reveal px-4" style={{ animationDelay: '0.4s' }}>
             {[
               { number: '61개', label: '핵심 용어' },
               { number: '6개', label: '카테고리' },
@@ -234,12 +234,12 @@ function App() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="card-brutal p-6 text-center magnetic"
+                className="card-brutal p-4 md:p-6 text-center magnetic"
               >
-                <div className="text-5xl font-black text-gradient-electric mb-2">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-gradient-electric mb-1 md:mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm font-bold text-gray-600 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-xs md:text-sm font-bold text-gray-600 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -256,15 +256,15 @@ function App() {
         { id: 'analytics', category: 'analytics', color: 'cyan', emoji: '📊', bgColor: 'bg-cyan-50/80' }
       ].map((section, idx) => (
         <section key={section.id} id={section.id} className={`section-spacing ${section.bgColor}`}>
-          <div className="container-wide">
+          <div className="container-wide px-4">
             {/* Section Header */}
-            <div className="flex items-center gap-6 mb-16">
-              <div className="text-6xl">{section.emoji}</div>
+            <div className="flex items-center gap-4 md:gap-6 mb-12 md:mb-16">
+              <div className="text-4xl md:text-6xl">{section.emoji}</div>
               <div>
-                <h2 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-2 tracking-tight">
                   {categoryNames[section.category]}
                 </h2>
-                <p className="text-lg text-gray-600 font-semibold">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 font-semibold">
                   {section.category === 'basic' && '유튜브를 시작하기 위한 기본 용어'}
                   {section.category === 'production' && '영상 제작과 관련된 용어'}
                   {section.category === 'revenue' && '수익 창출과 관련된 용어'}
@@ -280,31 +280,31 @@ function App() {
               {termsByCategory[section.category].map((term, index) => (
                 <div
                   key={index}
-                  className="card-brutal p-8 group"
+                  className="card-brutal p-5 md:p-8 group"
                 >
                   {/* Term Header */}
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-2xl font-black group-hover:scale-110 transition-transform">
+                  <div className="flex items-start gap-3 md:gap-4 mb-5 md:mb-6">
+                    <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-black text-white rounded-xl flex items-center justify-center text-xl md:text-2xl font-black group-hover:scale-110 transition-transform">
                       {term.korean[0]}
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-black mb-1">{term.korean}</h3>
-                      <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">{term.english}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-1 break-words">{term.korean}</h3>
+                      <p className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider break-words">{term.english}</p>
                     </div>
                   </div>
 
                   {/* Simple Explanation */}
-                  <div className="bg-gray-50 rounded-xl p-5 mb-5">
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl font-black flex-shrink-0">=</span>
-                      <p className="text-lg font-bold text-gray-800">{term.simple}</p>
+                  <div className="bg-gray-50 rounded-xl p-4 md:p-5 mb-4 md:mb-5">
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <span className="text-xl md:text-2xl font-black flex-shrink-0">=</span>
+                      <p className="text-base md:text-lg font-bold text-gray-800 break-words">{term.simple}</p>
                     </div>
                   </div>
 
                   {/* Example */}
-                  <div className="flex items-start gap-3 text-gray-600">
-                    <span className="text-xl">💡</span>
-                    <p className="text-sm leading-relaxed">{term.example}</p>
+                  <div className="flex items-start gap-2 md:gap-3 text-gray-600">
+                    <span className="text-lg md:text-xl flex-shrink-0">💡</span>
+                    <p className="text-xs sm:text-sm leading-relaxed break-words">{term.example}</p>
                   </div>
                 </div>
               ))}
