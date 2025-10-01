@@ -173,19 +173,32 @@ function App() {
         {isMenuOpen && (
           <div className="lg:hidden glass-modern border-b border-gray-900/10">
             <div className="container-wide px-4 py-4">
-              <button
-                onClick={() => {
-                  scrollToSection('news');
-                  setIsMenuOpen(false);
-                }}
-                className={`w-full text-left py-3 px-4 rounded-lg font-bold transition-all ${
-                  activeSection === 'news'
-                    ? 'bg-purple-100 text-purple-600'
-                    : 'text-gray-600 hover:bg-gray-100'
-                }`}
-              >
-                📰 뉴스
-              </button>
+              <div className="flex flex-col gap-2">
+                {[
+                  { id: 'basic', label: '기본', emoji: '👋' },
+                  { id: 'production', label: '제작', emoji: '🎬' },
+                  { id: 'revenue', label: '수익', emoji: '💰' },
+                  { id: 'advanced', label: '고급', emoji: '🚀' },
+                  { id: 'community', label: '소통', emoji: '💬' },
+                  { id: 'analytics', label: '통계', emoji: '📊' },
+                  { id: 'news', label: '뉴스', emoji: '📰' }
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => {
+                      scrollToSection(item.id);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`w-full text-left py-3 px-4 rounded-lg font-bold transition-all ${
+                      activeSection === item.id
+                        ? 'bg-purple-100 text-purple-600'
+                        : 'text-gray-600 hover:bg-gray-100'
+                    }`}
+                  >
+                    {item.emoji} {item.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}
