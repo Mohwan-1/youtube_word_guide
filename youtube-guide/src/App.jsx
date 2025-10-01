@@ -131,7 +131,7 @@ function App() {
 
               {/* Font Controls */}
               <div className="flex items-center gap-3">
-                <div className="hidden sm:flex items-center gap-1 bg-gray-100 rounded-full p-1">
+                <div className="hidden items-center gap-1 bg-gray-100 rounded-full p-1">
                   <Button
                     onClick={decreaseFontSize}
                     disabled={fontSize === 'normal'}
