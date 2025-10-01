@@ -216,19 +216,19 @@ function App() {
             loop
             muted
             playsInline
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover opacity-30"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover opacity-80"
           >
             <source src="/randing_hero.mp4" type="video/mp4" />
           </video>
           {/* Video Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/30 to-white/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-white/20" />
         </div>
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 md:right-20 w-48 h-48 md:w-96 md:h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 left-10 md:left-20 w-48 h-48 md:w-96 md:h-96 bg-pink-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 w-48 h-48 md:w-96 md:h-96 bg-blue-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 right-10 md:right-20 w-48 h-48 md:w-96 md:h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 left-10 md:left-20 w-48 h-48 md:w-96 md:h-96 bg-pink-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 w-48 h-48 md:w-96 md:h-96 bg-blue-400/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="container-standard relative z-10 text-center">
