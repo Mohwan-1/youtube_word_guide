@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
+import newsData from '@/data/naver-news.json';
 
 export function NewsSection() {
   const [newsItems, setNewsItems] = useState([]);
@@ -13,14 +14,8 @@ export function NewsSection() {
   const loadNews = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/src/data/naver-news.json');
-
-      if (!response.ok) {
-        throw new Error('뉴스를 불러올 수 없습니다');
-      }
-
-      const data = await response.json();
-      setNewsItems(data);
+      // JSON 파일을 직접 import하여 사용
+      setNewsItems(newsData);
       setError(null);
     } catch (err) {
       console.error('Failed to load news:', err);
