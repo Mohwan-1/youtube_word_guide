@@ -373,7 +373,7 @@ function App() {
           </div>
           <h3 className="text-3xl font-black mb-4">유튜브 용어 사전</h3>
           <p className="text-gray-400 mb-2 font-semibold">
-            모든 분들이 유튜브를 쉽게 즐길 수 있도록
+            시니어 분들이 유튜브를 쉽게 즐길 수 있도록
           </p>
           <p className="text-gray-500 mb-10 font-bold text-lg">
             시돈띵이 함께 합니다
