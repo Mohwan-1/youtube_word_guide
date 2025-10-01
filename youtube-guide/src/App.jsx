@@ -216,12 +216,12 @@ function App() {
             loop
             muted
             playsInline
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover opacity-80"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
           >
             <source src="/randing_hero.mp4" type="video/mp4" />
           </video>
           {/* Video Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-white/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20" />
         </div>
 
         {/* Animated Background Elements */}
@@ -246,7 +246,7 @@ function App() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-10 md:mb-12 max-w-2xl mx-auto font-semibold animate-reveal leading-relaxed px-4" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-10 md:mb-12 max-w-2xl mx-auto font-semibold animate-reveal leading-relaxed px-4" style={{ animationDelay: '0.2s' }}>
             61개 핵심 용어를 쉽게 설명합니다
             <br />
             초보자부터 전문가까지
