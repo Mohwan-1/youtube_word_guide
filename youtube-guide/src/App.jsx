@@ -195,8 +195,12 @@ function App() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto font-semibold animate-reveal" style={{ animationDelay: '0.2s' }}>
-            61개 핵심 용어를 쉽게 설명합니다. 초보자부터 전문가까지 단 몇 분이면 충분합니다.
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto font-semibold animate-reveal leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            61개 핵심 용어를 쉽게 설명합니다
+            <br />
+            초보자부터 전문가까지
+            <br />
+            단 몇 분이면 충분합니다
           </p>
 
           {/* CTA Buttons */}
