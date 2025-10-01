@@ -168,6 +168,27 @@ function App() {
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden glass-modern border-b border-gray-900/10">
+            <div className="container-wide px-4 py-4">
+              <button
+                onClick={() => {
+                  scrollToSection('news');
+                  setIsMenuOpen(false);
+                }}
+                className={`w-full text-left py-3 px-4 rounded-lg font-bold transition-all ${
+                  activeSection === 'news'
+                    ? 'bg-purple-100 text-purple-600'
+                    : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                📰 뉴스
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Bold Hero Section */}
