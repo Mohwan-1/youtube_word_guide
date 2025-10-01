@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "crawl": "node scripts/crawl-naver-news.js",
+    "start:scheduler": "node scripts/scheduler.js"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.7",
@@ -16,8 +18,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.55.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "rss-parser": "^3.13.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"
   },

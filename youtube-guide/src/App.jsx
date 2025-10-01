@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { termsByCategory, categoryNames } from '@/data/terms';
+import { NewsSection } from '@/components/NewsSection';
 
 function App() {
   const [fontSize, setFontSize] = useState('normal');
@@ -21,7 +22,7 @@ function App() {
     };
 
     const handleScroll = () => {
-      const sections = ['hero', 'basic', 'production', 'revenue', 'advanced', 'community', 'analytics'];
+      const sections = ['hero', 'basic', 'production', 'revenue', 'advanced', 'community', 'analytics', 'news'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -91,9 +92,9 @@ function App() {
                 className="flex items-center gap-4 magnetic"
               >
                 <img
-                  src="/black@2x.png"
-                  alt="SDI Logo"
-                  className="h-12 w-auto object-contain"
+                  src="/sidondding logo.png"
+                  alt="시돈띵 Logo"
+                  className="h-16 w-auto object-contain"
                 />
                 <div className="hidden md:block">
                   <h1 className="font-black text-xl text-gradient-vivid leading-tight">
@@ -111,7 +112,8 @@ function App() {
                   { id: 'revenue', label: '수익' },
                   { id: 'advanced', label: '고급' },
                   { id: 'community', label: '소통' },
-                  { id: 'analytics', label: '통계' }
+                  { id: 'analytics', label: '통계' },
+                  { id: 'news', label: '뉴스' }
                 ].map((item) => (
                   <button
                     key={item.id}
@@ -311,6 +313,9 @@ function App() {
         </section>
       ))}
 
+      {/* News Section */}
+      <NewsSection />
+
       {/* Footer - Minimalist */}
       <footer className="section-spacing bg-black text-white print:hidden">
         <div className="container-wide text-center">
@@ -318,8 +323,11 @@ function App() {
             <span className="text-3xl">📺</span>
           </div>
           <h3 className="text-3xl font-black mb-4">유튜브 용어 사전</h3>
-          <p className="text-gray-400 mb-10 font-semibold">
+          <p className="text-gray-400 mb-2 font-semibold">
             모든 분들이 유튜브를 쉽게 즐길 수 있도록
+          </p>
+          <p className="text-gray-500 mb-10 font-bold text-lg">
+            시돈띵이 함께 합니다
           </p>
           <Button
             onClick={handlePrint}
